@@ -9,9 +9,6 @@ spec:
     matchLabels:
       app: phpmyadmin
   template:
-    metadata:
-      labels:
-        app: phpmyadmin
     spec:
       containers:
       - name: phpmyadmin
@@ -23,3 +20,6 @@ spec:
         ports:
         - containerPort: 5000
         imagePullPolicy: Never
+    metadata:
+      labels:
+        app: phpmyadmin
