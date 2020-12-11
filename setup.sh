@@ -30,6 +30,7 @@ docker build -t phpmyadmin ./srcs/phpmyadmin/
 kubectl apply -f ./srcs/phpmyadmin/phpmyadmin-deployment.yaml
 kubectl apply -f ./srcs/phpmyadmin/phpmyadmin-service.yaml
 
+# build influxdb
 docker build -t influxdb ./srcs/influxdb/
 kubectl apply -f srcs/influxdb/influxdb.yaml
 kubectl apply -f srcs/influxdb/influxdb-pv.yaml
