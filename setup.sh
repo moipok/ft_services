@@ -33,10 +33,16 @@ kubectl apply -f ./srcs/phpmyadmin/phpmyadmin-service.yaml
 docker build -t influxdb ./srcs/influxdb/
 kubectl apply -f srcs/influxdb/influxdb.yaml
 kubectl apply -f srcs/influxdb/influxdb-pv.yaml
+
 # build grafana
 docker build -t grafana ./srcs/grafana
 kubectl apply -f ./srcs/grafana/grafana-deployment.yaml
 kubectl apply -f ./srcs/grafana/grafana-service.yaml
 
+# ftps
+docker build -t ftps ./srcs/ftps
+
+kubectl apply -f ./srcs/ftps/ftps-deployment.yaml
+kubectl apply -f ./srcs/ftps/ftps-service.yaml
 
 minikube dashboard
